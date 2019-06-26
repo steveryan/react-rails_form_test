@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a very simple app that was created to familiarize myself with various ways of integrating react (via the react-rails gem) with a rails app(specifically around the creation of new db objects). I have created 3 "new" forms, 1 rails only form, one react form, and one hybrid form.
 
-Things you may want to cover:
+The rails only form uses a standard rails form to create a simple object with a title, and content.
 
-* Ruby version
+The react form uses a rails form "wrapper" but all fields/buttons on the form are a react component (app/javascript/components/ReactForm.js).
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The hybrid form uses a standard rails form, like in the rails only form, but the title field is created and managed by a react component (app/javascript/components/TitleFormOnly.js).
