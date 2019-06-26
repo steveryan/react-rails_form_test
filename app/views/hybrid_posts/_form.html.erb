@@ -1,0 +1,24 @@
+<%= form_with(model: hybrid_post, local: true) do |form| %>
+  <% if hybrid_post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hybrid_post.errors.count, "error") %> prohibited this hybrid_post from being saved:</h2>
+
+      <ul>
+      <% hybrid_post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= react_component 'TitleFormOnly', { hybrid_post: @hybrid_post } %>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,421 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateRailsPosts (20190625234100)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "rails_posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190625234100_create_rails_posts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190625234100"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateHybridPosts (20190625234130)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "hybrid_posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190625234130_create_hybrid_posts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190625234130"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateReactPosts (20190625234144)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "react_posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190625234144_create_react_posts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190625234144"]]
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-25 23:42:07.605919"], ["updated_at", "2019-06-25 23:42:07.605919"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2019-06-25 19:44:06 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/steve/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/steve/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/steve/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (6.4ms)
+Completed 200 OK in 26ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-25 19:44:10 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/steve/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/steve/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (4.6ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-06-25 19:44:14 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/steve/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/steve/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (5.8ms)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/r/cats" for 127.0.0.1 at 2019-06-25 19:44:15 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/r/cats"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/rails_posts" for 127.0.0.1 at 2019-06-25 19:44:20 -0400
+Processing by RailsPostsController#index as HTML
+  Rendering rails_posts/index.html.erb within layouts/application
+  [1m[36mRailsPost Load (0.5ms)[0m  [1m[34mSELECT "rails_posts".* FROM "rails_posts"[0m
+  ↳ app/views/rails_posts/index.html.erb:15
+  Rendered rails_posts/index.html.erb within layouts/application (3.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 13819ms (Views: 13813.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rails_posts/new" for 127.0.0.1 at 2019-06-25 19:44:38 -0400
+Processing by RailsPostsController#new as HTML
+  Rendering rails_posts/new.html.erb within layouts/application
+  Rendered rails_posts/_form.html.erb (42.5ms)
+  Rendered rails_posts/new.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 107ms (Views: 87.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/rails_posts" for 127.0.0.1 at 2019-06-25 19:45:40 -0400
+Processing by RailsPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gd6H7smQK6zJbukPxW2QLJVGjZCyI9lthoIvkjENGSO6T5Nw/INny/EYAyuB+comlS4SJERGY+6KrtYNn6wLMg==", "rails_post"=>{"title"=>"Testing Rails-only Form", "content"=>"This is the first form that I am trying. It just uses rails form helpers. I didn't even create it, rails did it for me."}, "commit"=>"Create Rails post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/rails_posts_controller.rb:30
+  [1m[36mRailsPost Create (1.0ms)[0m  [1m[32mINSERT INTO "rails_posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Testing Rails-only Form"], ["content", "This is the first form that I am trying. It just uses rails form helpers. I didn't even create it, rails did it for me."], ["created_at", "2019-06-25 23:45:40.442116"], ["updated_at", "2019-06-25 23:45:40.442116"]]
+  ↳ app/controllers/rails_posts_controller.rb:30
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/rails_posts_controller.rb:30
+Redirected to http://localhost:3000/rails_posts/1
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/rails_posts/1" for 127.0.0.1 at 2019-06-25 19:45:40 -0400
+Processing by RailsPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRailsPost Load (0.3ms)[0m  [1m[34mSELECT  "rails_posts".* FROM "rails_posts" WHERE "rails_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rails_posts_controller.rb:67
+  Rendering rails_posts/show.html.erb within layouts/application
+  Rendered rails_posts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 55ms (Views: 46.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rails_posts" for 127.0.0.1 at 2019-06-25 19:45:43 -0400
+Processing by RailsPostsController#index as HTML
+  Rendering rails_posts/index.html.erb within layouts/application
+  [1m[36mRailsPost Load (0.2ms)[0m  [1m[34mSELECT "rails_posts".* FROM "rails_posts"[0m
+  ↳ app/views/rails_posts/index.html.erb:15
+  Rendered rails_posts/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rails_posts" for 127.0.0.1 at 2019-06-25 20:01:45 -0400
+Processing by RailsPostsController#index as HTML
+  Rendering rails_posts/index.html.erb within layouts/application
+  [1m[36mRailsPost Load (0.7ms)[0m  [1m[34mSELECT "rails_posts".* FROM "rails_posts"[0m
+  ↳ app/views/rails_posts/index.html.erb:15
+  Rendered rails_posts/index.html.erb within layouts/application (17.8ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 6311ms (Views: 6297.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/rails_posts" for 127.0.0.1 at 2019-06-25 20:02:01 -0400
+Processing by RailsPostsController#index as HTML
+  Rendering rails_posts/index.html.erb within layouts/application
+  [1m[36mRailsPost Load (0.3ms)[0m  [1m[34mSELECT "rails_posts".* FROM "rails_posts"[0m
+  ↳ app/views/rails_posts/index.html.erb:15
+  Rendered rails_posts/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 200ms (Views: 198.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rails_posts" for 127.0.0.1 at 2019-06-25 20:02:03 -0400
+Processing by RailsPostsController#index as HTML
+  Rendering rails_posts/index.html.erb within layouts/application
+  [1m[36mRailsPost Load (0.1ms)[0m  [1m[34mSELECT "rails_posts".* FROM "rails_posts"[0m
+  ↳ app/views/rails_posts/index.html.erb:15
+  Rendered rails_posts/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/react_posts" for 127.0.0.1 at 2019-06-25 20:02:07 -0400
+Processing by ReactPostsController#index as HTML
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (0.6ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 59ms (Views: 52.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/react_posts/new" for 127.0.0.1 at 2019-06-25 20:02:09 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (2.9ms)
+  Rendered react_posts/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 51ms (Views: 41.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/react_posts" for 127.0.0.1 at 2019-06-25 20:03:47 -0400
+Processing by ReactPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j5WjVGn0/pc4XUGeeeXL4uOqAxfumd9CFtNkhenM77gXB+legb5JL+1KbeA3WVdROhnkGHdJfoT74CEzkTs8Ag==", "react_post"=>{"title"=>"Testing React Post Form", "content"=>"This is the second form that I'm creating. It uses react for both the title and content fields. Submitting the form should return the 2 values to the rails form"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/react_posts_controller.rb:30
+  [1m[36mReactPost Create (0.9ms)[0m  [1m[32mINSERT INTO "react_posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Testing React Post Form"], ["content", "This is the second form that I'm creating. It uses react for both the title and content fields. Submitting the form should return the 2 values to the rails form"], ["created_at", "2019-06-26 00:03:47.050380"], ["updated_at", "2019-06-26 00:03:47.050380"]]
+  ↳ app/controllers/react_posts_controller.rb:30
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/react_posts_controller.rb:30
+Redirected to http://localhost:3000/react_posts/1
+Completed 302 Found in 7ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/react_posts/1" for 127.0.0.1 at 2019-06-25 20:03:47 -0400
+Processing by ReactPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReactPost Load (0.3ms)[0m  [1m[34mSELECT  "react_posts".* FROM "react_posts" WHERE "react_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/react_posts_controller.rb:67
+  Rendering react_posts/show.html.erb within layouts/application
+  Rendered react_posts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 95ms (Views: 90.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/react_posts" for 127.0.0.1 at 2019-06-25 20:03:58 -0400
+Processing by ReactPostsController#index as HTML
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (0.2ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 66ms (Views: 64.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-06-25 20:04:26 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/steve/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/steve/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (7.3ms)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/react_posts" for ::1 at 2019-06-25 20:04:38 -0400
+Processing by ReactPostsController#index as HTML
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (0.9ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 117ms (Views: 111.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-25 20:04:58 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (3.5ms)
+  Rendered react_posts/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 136ms (Views: 131.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-25 20:05:40 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (2.8ms)
+  Rendered react_posts/new.html.erb within layouts/application (4.6ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5090ms (Views: 5075.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-25 20:05:56 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (3.0ms)
+  Rendered react_posts/new.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 79ms (Views: 76.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-25 20:05:57 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (2.1ms)
+  Rendered react_posts/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/react_posts" for ::1 at 2019-06-25 20:06:00 -0400
+Processing by ReactPostsController#index as HTML
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (0.6ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 61ms (Views: 58.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-25 20:06:02 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.9ms)
+  Rendered react_posts/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-25 20:06:48 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (2.4ms)
+  Rendered react_posts/new.html.erb within layouts/application (4.1ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5349ms (Views: 5338.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-25 20:07:47 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.7ms)
+  Rendered react_posts/new.html.erb within layouts/application (3.1ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5734ms (Views: 5723.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-25 20:08:45 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (2.4ms)
+  Rendered react_posts/new.html.erb within layouts/application (3.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5242ms (Views: 5230.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-25 20:09:13 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.9ms)
+  Rendered react_posts/new.html.erb within layouts/application (3.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5348ms (Views: 5336.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/hybrid_posts" for ::1 at 2019-06-25 20:14:04 -0400
+Processing by HybridPostsController#index as HTML
+  Rendering hybrid_posts/index.html.erb within layouts/application
+  [1m[36mHybridPost Load (1.2ms)[0m  [1m[34mSELECT "hybrid_posts".* FROM "hybrid_posts"[0m
+  ↳ app/views/hybrid_posts/index.html.erb:15
+  Rendered hybrid_posts/index.html.erb within layouts/application (7.2ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5834ms (Views: 5825.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/hybrid_posts/new" for ::1 at 2019-06-25 20:14:12 -0400
+Processing by HybridPostsController#new as HTML
+  Rendering hybrid_posts/new.html.erb within layouts/application
+  Rendered hybrid_posts/_form.html.erb (7.1ms)
+  Rendered hybrid_posts/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 64ms (Views: 48.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/hybrid_posts/new" for ::1 at 2019-06-25 20:16:54 -0400
+Processing by HybridPostsController#new as HTML
+  Rendering hybrid_posts/new.html.erb within layouts/application
+  Rendered hybrid_posts/_form.html.erb (11.5ms)
+  Rendered hybrid_posts/new.html.erb within layouts/application (13.2ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5936ms (Views: 5922.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-25 20:19:46 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (2.3ms)
+  Rendered react_posts/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 117ms (Views: 92.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/hybrid_posts/new" for ::1 at 2019-06-25 20:20:03 -0400
+Processing by HybridPostsController#new as HTML
+  Rendering hybrid_posts/new.html.erb within layouts/application
+  Rendered hybrid_posts/_form.html.erb (11.9ms)
+  Rendered hybrid_posts/new.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 103ms (Views: 96.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-25 20:20:22 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.3ms)
+  Rendered react_posts/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 91ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hybrid_posts/new" for ::1 at 2019-06-25 20:20:35 -0400
+Processing by HybridPostsController#new as HTML
+  Rendering hybrid_posts/new.html.erb within layouts/application
+  Rendered hybrid_posts/_form.html.erb (6.3ms)
+  Rendered hybrid_posts/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 46ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hybrid_posts" for ::1 at 2019-06-25 20:21:37 -0400
+Processing by HybridPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QcB2VEg6PLpOf8ATh4qWF1b3Vqdzf0k3K2LKK8J4sw8w4gs+8W04bcfWSxOhXSULFzZT5h4bLKsBNOjOnrM+fg==", "hybrid_post"=>{"title"=>"This is a test of the hybrid approach.", "content"=>"In this approach I have used a rails form, but instead of a \"title\" input field, I am calling a react component that acts as the title input field."}, "commit"=>"Create Hybrid post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/hybrid_posts_controller.rb:30
+  [1m[36mHybridPost Create (165.4ms)[0m  [1m[32mINSERT INTO "hybrid_posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "This is a test of the hybrid approach."], ["content", "In this approach I have used a rails form, but instead of a \"title\" input field, I am calling a react component that acts as the title input field."], ["created_at", "2019-06-26 00:21:37.388835"], ["updated_at", "2019-06-26 00:21:37.388835"]]
+  ↳ app/controllers/hybrid_posts_controller.rb:30
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/hybrid_posts_controller.rb:30
+Redirected to http://localhost:3000/hybrid_posts/1
+Completed 302 Found in 177ms (ActiveRecord: 166.6ms)
+
+
+Started GET "/hybrid_posts/1" for ::1 at 2019-06-25 20:21:37 -0400
+Processing by HybridPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHybridPost Load (0.2ms)[0m  [1m[34mSELECT  "hybrid_posts".* FROM "hybrid_posts" WHERE "hybrid_posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hybrid_posts_controller.rb:67
+  Rendering hybrid_posts/show.html.erb within layouts/application
+  Rendered hybrid_posts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 96ms (Views: 90.6ms | ActiveRecord: 0.2ms)
+
+

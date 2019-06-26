@@ -1,0 +1,2 @@
+module RailsPostsHelper
+end

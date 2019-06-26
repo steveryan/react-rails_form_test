@@ -1,0 +1,2 @@
+class RailsPost < ApplicationRecord
+end
