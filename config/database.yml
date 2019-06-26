@@ -23,3 +23,5 @@ test:
 production:
   <<: *default
   database: react-rails_form_test_production
+  username: react-rails_form_test
+  password: <%= ENV['REACT-RAILS_FORM_TEST_DATABASE_PASSWORD'] %>
