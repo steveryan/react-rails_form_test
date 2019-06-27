@@ -1100,3 +1100,499 @@ Processing by ReactPostsController#new as HTML
 Completed 200 OK in 69ms (Views: 24.2ms | ActiveRecord: 35.3ms)
 
 
+Started GET "/react_posts/new" for ::1 at 2019-06-26 18:38:05 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (5.6ms)
+  Rendered react_posts/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 82ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/react_posts" for ::1 at 2019-06-26 18:38:19 -0400
+Processing by ReactPostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8yrVoSx0Q7erlk3VDbbpQbPu4cULTQDOyFV6Ycpl+EB/dN3enMxYaHBW/wPAdRcQcygtoXVlZPEPVg9A9EGlFQ==", "react_post"=>{"title"=>"testing", "content"=>"test test test"}}
+  [1m[35m (12.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/react_posts_controller.rb:30
+  [1m[36mReactPost Create (103.0ms)[0m  [1m[32mINSERT INTO "react_posts" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "testing"], ["content", "test test test"], ["created_at", "2019-06-26 22:38:19.092048"], ["updated_at", "2019-06-26 22:38:19.092048"]]
+  ↳ app/controllers/react_posts_controller.rb:30
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/react_posts_controller.rb:30
+Redirected to http://localhost:3000/react_posts/1
+Completed 302 Found in 130ms (ActiveRecord: 115.9ms)
+
+
+Started GET "/react_posts/1" for ::1 at 2019-06-26 18:38:19 -0400
+Processing by ReactPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReactPost Load (12.0ms)[0m  [1m[34mSELECT  "react_posts".* FROM "react_posts" WHERE "react_posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/react_posts_controller.rb:67
+  Rendering react_posts/show.html.erb within layouts/application
+  Rendered react_posts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 77ms (Views: 42.4ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/react_posts" for ::1 at 2019-06-26 18:38:21 -0400
+Processing by ReactPostsController#index as HTML
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (0.7ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 46ms (Views: 34.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/react_posts/1" for ::1 at 2019-06-26 18:38:23 -0400
+Processing by ReactPostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReactPost Load (1.2ms)[0m  [1m[34mSELECT  "react_posts".* FROM "react_posts" WHERE "react_posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/react_posts_controller.rb:67
+  Rendering react_posts/show.html.erb within layouts/application
+  Rendered react_posts/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 73ms (Views: 64.0ms | ActiveRecord: 1.2ms)
+
+
+  [1m[36mReactPost Load (0.4ms)[0m  [1m[34mSELECT  "react_posts".* FROM "react_posts" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/react_posts.json" for ::1 at 2019-06-26 18:43:31 -0400
+Processing by ReactPostsController#create as JSON
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.3) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.3) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.3) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.3) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:107:in `block in run_callbacks'
+activesupport (5.2.3) lib/active_support/callbacks.rb:136:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/react_posts" for ::1 at 2019-06-26 18:44:14 -0400
+Processing by ReactPostsController#index as HTML
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (3.5ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 92ms (Views: 71.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/react_posts" for ::1 at 2019-06-26 18:44:16 -0400
+Processing by ReactPostsController#index as HTML
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (0.4ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/react_posts.json" for ::1 at 2019-06-26 18:46:53 -0400
+Processing by ReactPostsController#create as JSON
+  Parameters: {"react_post"=>{"title"=>"foo", "content"=>"bar"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.3) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.3) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.3) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.3) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:107:in `block in run_callbacks'
+activesupport (5.2.3) lib/active_support/callbacks.rb:136:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/react_posts.json" for ::1 at 2019-06-26 18:51:58 -0400
+Processing by ReactPostsController#create as JSON
+  Parameters: {"react_post"=>{"title"=>"foo", "content"=>"bar"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/react_posts_controller.rb:30
+  [1m[36mReactPost Create (0.6ms)[0m  [1m[32mINSERT INTO "react_posts" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "foo"], ["content", "bar"], ["created_at", "2019-06-26 22:51:59.204909"], ["updated_at", "2019-06-26 22:51:59.204909"]]
+  ↳ app/controllers/react_posts_controller.rb:30
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/react_posts_controller.rb:30
+  Rendering react_posts/show.json.jbuilder
+  Rendered react_posts/_react_post.json.jbuilder (0.9ms)
+  Rendered react_posts/show.json.jbuilder (3.9ms)
+Completed 201 Created in 161ms (Views: 11.3ms | ActiveRecord: 123.8ms)
+
+
+Started GET "/react_posts" for ::1 at 2019-06-26 18:52:13 -0400
+Processing by ReactPostsController#index as HTML
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (0.4ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 66ms (Views: 62.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-26 18:53:39 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (2.2ms)
+  Rendered react_posts/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 47ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-27 10:04:03 -0400
+Started GET "/react_posts/new" for ::1 at 2019-06-27 10:04:03 -0400
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/steveryan/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/steveryan/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+Processing by ReactPostsController#new as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steveryan/Documents/rails/react-rails_form_test/public/packs
+Completed 200 OK in 12875ms (Views: 12865.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-27 10:04:16 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 51ms (Views: 48.9ms | ActiveRecord: 0.0ms)
+
+
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (2.1ms)
+  Rendered react_posts/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 13105ms (Views: 47.9ms | ActiveRecord: 171.5ms)
+
+
+Started GET "/react_posts?react_post%5Btitle%5D=testing&react_post%5Bcontent%5D=still+has+the+wrapper" for ::1 at 2019-06-27 10:04:42 -0400
+Processing by ReactPostsController#index as HTML
+  Parameters: {"react_post"=>{"title"=>"testing", "content"=>"still has the wrapper"}}
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (24.8ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 67ms (Views: 40.8ms | ActiveRecord: 24.8ms)
+
+
+Started GET "/react_posts?react_post%5Btitle%5D=testing&react_post%5Bcontent%5D=still+has+the+wrapper" for ::1 at 2019-06-27 10:04:51 -0400
+Processing by ReactPostsController#index as HTML
+  Parameters: {"react_post"=>{"title"=>"testing", "content"=>"still has the wrapper"}}
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (0.6ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/react_posts?react_post%5Btitle%5D=testing&react_post%5Bcontent%5D=still+has+the+wrapper" for ::1 at 2019-06-27 10:04:52 -0400
+Processing by ReactPostsController#index as HTML
+  Parameters: {"react_post"=>{"title"=>"testing", "content"=>"still has the wrapper"}}
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (0.6ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 10:05:48 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.2ms)
+  Rendered react_posts/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 58ms (Views: 55.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 10:07:06 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (3.1ms)
+  Rendered react_posts/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 69ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/react_posts?react_post%5Btitle%5D=testing&react_post%5Bcontent%5D=no+wrapper" for ::1 at 2019-06-27 10:07:22 -0400
+Processing by ReactPostsController#index as HTML
+  Parameters: {"react_post"=>{"title"=>"testing", "content"=>"no wrapper"}}
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (0.6ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/react_posts" for ::1 at 2019-06-27 10:07:49 -0400
+Processing by ReactPostsController#index as HTML
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (0.4ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 321ms (Views: 319.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 10:07:58 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (0.8ms)
+  Rendered react_posts/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/react_posts?react_post%5Btitle%5D=testing&react_post%5Bcontent%5D=hmmmm" for ::1 at 2019-06-27 10:08:06 -0400
+Processing by ReactPostsController#index as HTML
+  Parameters: {"react_post"=>{"title"=>"testing", "content"=>"hmmmm"}}
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (0.3ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/react_posts?react_post%5Btitle%5D=testing&react_post%5Bcontent%5D=hmmmm" for ::1 at 2019-06-27 10:13:58 -0400
+Processing by ReactPostsController#index as HTML
+  Parameters: {"react_post"=>{"title"=>"testing", "content"=>"hmmmm"}}
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (0.6ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (47.2ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steveryan/Documents/rails/react-rails_form_test/public/packs
+Completed 200 OK in 4998ms (Views: 4952.2ms | ActiveRecord: 34.7ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 10:14:42 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (0.8ms)
+  Rendered react_posts/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/react_posts" for ::1 at 2019-06-27 10:14:45 -0400
+Processing by ReactPostsController#create as HTML
+  Parameters: {"react_post"=>{"title"=>"s", "content"=>""}}
+Can't verify CSRF token authenticity.
+  [1m[35m (12.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/react_posts_controller.rb:30
+  [1m[36mReactPost Create (8.2ms)[0m  [1m[32mINSERT INTO "react_posts" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "s"], ["content", ""], ["created_at", "2019-06-27 14:14:45.542413"], ["updated_at", "2019-06-27 14:14:45.542413"]]
+  ↳ app/controllers/react_posts_controller.rb:30
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/react_posts_controller.rb:30
+Redirected to http://localhost:3000/react_posts/3
+Completed 302 Found in 30ms (ActiveRecord: 22.2ms)
+
+
+Started GET "/react_posts/3" for ::1 at 2019-06-27 10:14:45 -0400
+Processing by ReactPostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mReactPost Load (18.3ms)[0m  [1m[34mSELECT  "react_posts".* FROM "react_posts" WHERE "react_posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/react_posts_controller.rb:67
+  Rendering react_posts/show.html.erb within layouts/application
+  Rendered react_posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 175ms (Views: 144.6ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/react_posts" for ::1 at 2019-06-27 10:14:47 -0400
+Processing by ReactPostsController#index as HTML
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (0.5ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/react_posts/3" for ::1 at 2019-06-27 10:14:50 -0400
+Processing by ReactPostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+wfS+XxMlFqV6Qy69zQ0FaZpStE6H6P1nf7suRx83Z93WdqGzPSPhU4pvmw698pEZq+GtUQ3x8pa/ZmYIliAyg==", "id"=>"3"}
+  [1m[36mReactPost Load (0.3ms)[0m  [1m[34mSELECT  "react_posts".* FROM "react_posts" WHERE "react_posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/react_posts_controller.rb:67
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/react_posts_controller.rb:57
+  [1m[36mReactPost Destroy (22.6ms)[0m  [1m[31mDELETE FROM "react_posts" WHERE "react_posts"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/react_posts_controller.rb:57
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/react_posts_controller.rb:57
+Redirected to http://localhost:3000/react_posts
+Completed 302 Found in 31ms (ActiveRecord: 23.7ms)
+
+
+Started GET "/react_posts" for ::1 at 2019-06-27 10:14:50 -0400
+Processing by ReactPostsController#index as HTML
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (0.3ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 10:14:52 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (0.5ms)
+  Rendered react_posts/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 37ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/react_posts" for ::1 at 2019-06-27 10:15:20 -0400
+Processing by ReactPostsController#create as HTML
+  Parameters: {"react_post"=>{"title"=>"testing react form without rails form wrapper", "content"=>""}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/react_posts_controller.rb:30
+  [1m[36mReactPost Create (6.3ms)[0m  [1m[32mINSERT INTO "react_posts" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "testing react form without rails form wrapper"], ["content", ""], ["created_at", "2019-06-27 14:15:20.580075"], ["updated_at", "2019-06-27 14:15:20.580075"]]
+  ↳ app/controllers/react_posts_controller.rb:30
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/react_posts_controller.rb:30
+Redirected to http://localhost:3000/react_posts/4
+Completed 302 Found in 16ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/react_posts/4" for ::1 at 2019-06-27 10:15:20 -0400
+Processing by ReactPostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mReactPost Load (0.3ms)[0m  [1m[34mSELECT  "react_posts".* FROM "react_posts" WHERE "react_posts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/react_posts_controller.rb:67
+  Rendering react_posts/show.html.erb within layouts/application
+  Rendered react_posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/react_posts" for ::1 at 2019-06-27 10:15:23 -0400
+Processing by ReactPostsController#index as HTML
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (0.4ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.4ms)
+
+

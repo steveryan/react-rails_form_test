@@ -1,14 +1,2 @@
-<%= form_with(model: react_post, local: true) do |form| %>
-  <% if react_post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(react_post.errors.count, "error") %> prohibited this react_post from being saved:</h2>
 
-      <ul>
-      <% react_post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 <%= react_component 'ReactForm', { react_post: @react_post } %>
-<% end %>

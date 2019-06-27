@@ -18,7 +18,7 @@ class ReactForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <form action="/react_posts" method="POST">
         <label>Title</label>
         <input
           type="text"
@@ -36,7 +36,7 @@ class ReactForm extends React.Component {
         />
         <br/>
         <input type="submit" value="Create Post" />
-      </div>
+      </form>
     );
   }
 }
