@@ -1596,3 +1596,445 @@ Processing by ReactPostsController#index as HTML
 Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for ::1 at 2019-06-27 20:50:30 -0400
+  [1m[35m (441.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/steve/.rbenv/versions/2.6.2/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 1847ms (Views: 1835.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails_posts/new" for ::1 at 2019-06-27 20:51:32 -0400
+Processing by RailsPostsController#new as HTML
+  Rendering rails_posts/new.html.erb within layouts/application
+  Rendered rails_posts/_form.html.erb (21.6ms)
+  Rendered rails_posts/new.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 167ms (Views: 63.3ms | ActiveRecord: 93.5ms)
+
+
+Started GET "/rails_posts" for ::1 at 2019-06-27 20:55:46 -0400
+Processing by RailsPostsController#index as HTML
+  Rendering rails_posts/index.html.erb within layouts/application
+  [1m[36mRailsPost Load (24.3ms)[0m  [1m[34mSELECT "rails_posts".* FROM "rails_posts"[0m
+  ↳ app/views/rails_posts/index.html.erb:15
+  Rendered rails_posts/index.html.erb within layouts/application (51.6ms)
+Completed 200 OK in 142ms (Views: 107.8ms | ActiveRecord: 24.3ms)
+
+
+Started GET "/" for ::1 at 2019-06-27 20:55:54 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 42ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hybrid_posts/new" for ::1 at 2019-06-27 20:55:56 -0400
+Processing by HybridPostsController#new as HTML
+  Rendering hybrid_posts/new.html.erb within layouts/application
+  Rendered hybrid_posts/_form.html.erb (4.4ms)
+  Rendered hybrid_posts/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 65ms (Views: 45.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-27 20:57:52 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 131ms (Views: 128.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 20:57:55 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.4ms)
+  Rendered react_posts/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 65ms (Views: 51.0ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/react_posts" for ::1 at 2019-06-27 21:01:22 -0400
+Processing by ReactPostsController#create as HTML
+  Parameters: {"react_post"=>{"title"=>"testing react only form with brooks", "content"=>"test test test"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/react_posts_controller.rb:30
+  [1m[36mReactPost Create (22.1ms)[0m  [1m[32mINSERT INTO "react_posts" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "testing react only form with brooks"], ["content", "test test test"], ["created_at", "2019-06-28 01:01:22.428113"], ["updated_at", "2019-06-28 01:01:22.428113"]]
+  ↳ app/controllers/react_posts_controller.rb:30
+  [1m[35m (41.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/react_posts_controller.rb:30
+Redirected to http://localhost:3000/react_posts/2
+Completed 302 Found in 92ms (ActiveRecord: 66.1ms)
+
+
+Started GET "/react_posts/2" for ::1 at 2019-06-27 21:01:22 -0400
+Processing by ReactPostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReactPost Load (1.3ms)[0m  [1m[34mSELECT  "react_posts".* FROM "react_posts" WHERE "react_posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/react_posts_controller.rb:67
+  Rendering react_posts/show.html.erb within layouts/application
+  Rendered react_posts/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 148ms (Views: 110.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/react_posts" for ::1 at 2019-06-27 21:01:34 -0400
+Processing by ReactPostsController#index as HTML
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (0.4ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 47ms (Views: 44.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:04:55 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (0.6ms)
+  Rendered react_posts/new.html.erb within layouts/application (2.6ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 4879ms (Views: 4864.0ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/react_posts" for ::1 at 2019-06-27 21:05:44 -0400
+Processing by ReactPostsController#index as HTML
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (1.3ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 84ms (Views: 69.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/react_posts" for ::1 at 2019-06-27 21:05:47 -0400
+Processing by ReactPostsController#index as HTML
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (0.4ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 37ms (Views: 33.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:05:49 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.5ms)
+  Rendered react_posts/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 36ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:06:59 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.2ms)
+  Rendered react_posts/new.html.erb within layouts/application (3.2ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5446ms (Views: 5431.0ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:08:59 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (0.8ms)
+  Rendered react_posts/new.html.erb within layouts/application (2.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5468ms (Views: 5453.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for ::1 at 2019-06-27 21:09:35 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 112ms (Views: 103.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:09:38 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.4ms)
+  Rendered react_posts/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 50ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:10:44 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.0ms)
+  Rendered react_posts/new.html.erb within layouts/application (3.3ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5984ms (Views: 5943.5ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:12:22 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (0.9ms)
+  Rendered react_posts/new.html.erb within layouts/application (3.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5158ms (Views: 5142.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:13:28 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (0.7ms)
+  Rendered react_posts/new.html.erb within layouts/application (2.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5576ms (Views: 5562.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:19:58 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.4ms)
+  Rendered react_posts/new.html.erb within layouts/application (5.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5113ms (Views: 5087.3ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:21:08 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (0.8ms)
+  Rendered react_posts/new.html.erb within layouts/application (2.8ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5687ms (Views: 5669.1ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:21:46 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (0.7ms)
+  Rendered react_posts/new.html.erb within layouts/application (2.8ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5474ms (Views: 5460.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:23:02 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.2ms)
+  Rendered react_posts/new.html.erb within layouts/application (4.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5652ms (Views: 5628.8ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:24:15 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (0.8ms)
+  Rendered react_posts/new.html.erb within layouts/application (2.7ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5309ms (Views: 5296.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:26:35 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.2ms)
+  Rendered react_posts/new.html.erb within layouts/application (4.6ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5127ms (Views: 5099.8ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:27:35 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (0.8ms)
+  Rendered react_posts/new.html.erb within layouts/application (3.2ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5291ms (Views: 5276.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:28:31 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.7ms)
+  Rendered react_posts/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 59ms (Views: 56.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:30:10 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (0.7ms)
+  Rendered react_posts/new.html.erb within layouts/application (2.5ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 4870ms (Views: 4856.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:32:00 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.4ms)
+  Rendered react_posts/new.html.erb within layouts/application (4.6ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5340ms (Views: 5322.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:32:28 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.0ms)
+  Rendered react_posts/new.html.erb within layouts/application (3.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 4733ms (Views: 4700.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:33:27 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.0ms)
+  Rendered react_posts/new.html.erb within layouts/application (2.8ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5673ms (Views: 5656.2ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/react_posts" for ::1 at 2019-06-27 21:33:43 -0400
+Processing by ReactPostsController#create as HTML
+  Parameters: {"react_post"=>{"title"=>"", "content"=>""}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/react_posts_controller.rb:30
+  [1m[36mReactPost Create (1.6ms)[0m  [1m[32mINSERT INTO "react_posts" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", ""], ["content", ""], ["created_at", "2019-06-28 01:33:43.610393"], ["updated_at", "2019-06-28 01:33:43.610393"]]
+  ↳ app/controllers/react_posts_controller.rb:30
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/react_posts_controller.rb:30
+Redirected to http://localhost:3000/react_posts/3
+Completed 302 Found in 18ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/react_posts/3" for ::1 at 2019-06-27 21:33:43 -0400
+Processing by ReactPostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mReactPost Load (0.5ms)[0m  [1m[34mSELECT  "react_posts".* FROM "react_posts" WHERE "react_posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/react_posts_controller.rb:67
+  Rendering react_posts/show.html.erb within layouts/application
+  Rendered react_posts/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 86ms (Views: 58.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/react_posts" for ::1 at 2019-06-27 21:33:45 -0400
+Processing by ReactPostsController#index as HTML
+  Rendering react_posts/index.html.erb within layouts/application
+  [1m[36mReactPost Load (0.3ms)[0m  [1m[34mSELECT "react_posts".* FROM "react_posts"[0m
+  ↳ app/views/react_posts/index.html.erb:15
+  Rendered react_posts/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 65ms (Views: 54.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:33:47 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.0ms)
+  Rendered react_posts/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 63ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 21:37:14 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.0ms)
+  Rendered react_posts/new.html.erb within layouts/application (2.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5438ms (Views: 5421.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 22:13:39 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.2ms)
+  Rendered react_posts/new.html.erb within layouts/application (5.1ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5166ms (Views: 5084.3ms | ActiveRecord: 57.5ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 22:14:05 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (1.1ms)
+  Rendered react_posts/new.html.erb within layouts/application (4.4ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5565ms (Views: 5541.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 22:36:37 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (6.6ms)
+  Rendered react_posts/new.html.erb within layouts/application (12.3ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 8183ms (Views: 8072.1ms | ActiveRecord: 27.3ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 23:41:11 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (5.6ms)
+  Rendered react_posts/new.html.erb within layouts/application (11.0ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5708ms (Views: 5650.2ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 23:41:56 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (2.2ms)
+  Rendered react_posts/new.html.erb within layouts/application (6.8ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 5684ms (Views: 5664.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-27 23:42:24 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (4.7ms)
+  Rendered react_posts/new.html.erb within layouts/application (6.3ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 4539ms (Views: 4511.5ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/react_posts/new" for ::1 at 2019-06-29 13:24:43 -0400
+Processing by ReactPostsController#new as HTML
+  Rendering react_posts/new.html.erb within layouts/application
+  Rendered react_posts/_form.html.erb (34.0ms)
+  Rendered react_posts/new.html.erb within layouts/application (175.3ms)
+Completed 200 OK in 1154ms (Views: 943.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-29 13:24:51 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 316ms (Views: 298.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails_posts/new" for ::1 at 2019-06-29 13:25:09 -0400
+Processing by RailsPostsController#new as HTML
+  Rendering rails_posts/new.html.erb within layouts/application
+  Rendered rails_posts/_form.html.erb (114.2ms)
+  Rendered rails_posts/new.html.erb within layouts/application (123.9ms)
+Completed 200 OK in 1203ms (Views: 492.1ms | ActiveRecord: 11.1ms)
+
+

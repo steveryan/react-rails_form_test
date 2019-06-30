@@ -4,11 +4,14 @@ class ReactForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: props.react_post.title,
-      content: props.react_post.content
+      title: props.title,
+      content: props.content
     };
+    //this.handleTitleChange = this.handleTitleChange.bind(this);
+    this.handleContentChange = this.handleContentChange.bind(this);
   }
-  handleTitleChange(e) {
+
+  handleTitleChange = (e) => {
     this.setState({ title: e.target.value });
   }
 
@@ -18,6 +21,7 @@ class ReactForm extends React.Component {
 
   render() {
     return (
+      <React.Fragment>
       <form action="/react_posts" method="POST">
         <label>Title</label>
         <input
@@ -37,12 +41,11 @@ class ReactForm extends React.Component {
         <br/>
         <input type="submit" value="Create Post" />
       </form>
+      <p>Title: {this.state.title}</p>
+      <p>Content: {this.state.content}</p>
+      </React.Fragment>
     );
   }
 }
 
-ReactForm.propTypes = {
-  title: PropTypes.string,
-  content: PropTypes.string
-};
 export default ReactForm
