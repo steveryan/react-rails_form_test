@@ -14,9 +14,27 @@
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
+import "jquery";
 console.log('Hello World from Webpacker')
 // Support component names relative to this directory:
 var componentRequireContext = require.context("components", true);
 var ReactRailsUJS = require("react_ujs");
+var zxcvbn = require("zxcvbn");
+var $ = require("jquery");
 ReactRailsUJS.useContext(componentRequireContext);
+
+$(document).ready(function(){
+  if ($("input").val() == "") {
+    $(".progress-bar").hide();
+  }
+  $(".progress-bar").css("width", $("input").outerWidth());
+  $("input").keyup(function(event){
+    $(".pw-strength").attr("value", zxcvbn($("input").val()).score);
+    if ($("input").val() == "") {
+      $(".progress-bar").hide();
+    }
+    if ($("input").val() !== "") {
+      $(".progress-bar").show();
+    }
+  });
+});

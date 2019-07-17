@@ -1,3 +1,46 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.progress-bar {
+  width: 25%;
+  height: 5px;
+  background-color: #EEEE;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+}
+.pw-strength[value="0"] {
+  -webkit-appearance: none;
+  width: 12%;
+  height: 5px;
+  background-color: red;
+  border-radius: 2px;
+}
+.pw-strength[value="1"] {
+  -webkit-appearance: none;
+  width: 25%;
+  height: 5px;
+  background-color: red;
+  border-radius: 2px;
+}
+.pw-strength[value="2"] {
+  -webkit-appearance: none;
+  width: 50%;
+  height: 5px;
+  background-color: orange;
+  border-radius: 2px;
+}
+.pw-strength[value="3"] {
+  -webkit-appearance: none;
+  width: 75%;
+  height: 5px;
+  background-color: green;
+  border-radius: 2px;
+}
+.pw-strength[value="4"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  background-color: green;
+  border-radius: 2px;
+}
