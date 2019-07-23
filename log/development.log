@@ -2950,3 +2950,19 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 3896ms (Views: 3894.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-07-16 23:19:54 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.7ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /Users/steve/Sites/react-rails_form_test/public/packs
+Completed 200 OK in 13185ms (Views: 13181.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-16 23:24:59 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 83ms (Views: 76.4ms | ActiveRecord: 0.0ms)
+
+
